@@ -60,7 +60,7 @@ export default function FjordFreightPage() {
 
           <div className="fjord-process-item">
             <h3 className="fjord-process-label fjord-process-label-left">
-              Mid Fidelity Wireframe
+              Mid Fidelity Wireframes
             </h3>
             <div className="fjord-process-img fjord-process-img-wide">
               <img src={midfiWireframe} alt="Mid fidelity wireframe" />
@@ -223,6 +223,16 @@ export default function FjordFreightPage() {
             <img src={lessonsLearnt} alt="Dashboard annotations" />
           </div>
         </section>
+
+        <nav className="project-pager project-pager-dark" aria-label="Project page navigation">
+          <Link to="/fruh-genug" className="project-turn project-turn-link" aria-label="Go to project 1 of 2">
+            &lt;
+          </Link>
+          <span className="project-turn project-turn-current">2</span>
+          <span className="project-turn project-turn-disabled" aria-hidden="true">
+            &gt;
+          </span>
+        </nav>
       </div>
     </div>
   )

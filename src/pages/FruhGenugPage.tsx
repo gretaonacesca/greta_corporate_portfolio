@@ -5,7 +5,7 @@ import lofiSketch from '../assets/fruh-genug/lofi-sketch.png'
 import midfiWireframe from '../assets/fruh-genug/midfi-wireframe.png'
 import hifiMockup from '../assets/fruh-genug/hifi-mockup.png'
 import roadmap from '../assets/fruh-genug/roadmap.png'
-import architecture from '../assets/fruh-genug/architecture.png'
+import heroGrouped from '../assets/fruh-genug/hero-grouped.png'
 import './FruhGenugPage.css'
 
 export default function FruhGenugPage() {
@@ -15,9 +15,7 @@ export default function FruhGenugPage() {
         <Link to="/" className="back-link">← back</Link>
 
         <section className="fruh-hero">
-          <div className="fruh-hero-gradient">
-            <img src={architecture} alt="System architecture diagram" className="fruh-hero-diagram" />
-          </div>
+          <img src={heroGrouped} alt="Früh Genug system flow hero" className="fruh-hero-image" />
         </section>
 
         <section className="fruh-intro">
@@ -91,7 +89,7 @@ export default function FruhGenugPage() {
             <h3 className="fruh-process-label fruh-process-label-right">
               Low Fidelity Sketch
             </h3>
-            <div className="fruh-process-img">
+            <div className="fruh-process-img fruh-process-img-lowfi">
               <img src={lofiSketch} alt="Low fidelity sketch" />
             </div>
           </div>
@@ -132,12 +130,22 @@ export default function FruhGenugPage() {
           </div>
 
           <div className="fruh-roadmap">
-            <h3>Future Roadmap (feature planning)</h3>
+            <h3>Future Roadmap</h3>
             <div className="fruh-roadmap-img">
               <img src={roadmap} alt="Future roadmap" />
             </div>
           </div>
         </section>
+
+        <nav className="project-pager" aria-label="Project page navigation">
+          <span className="project-turn project-turn-disabled" aria-hidden="true">
+            &lt;
+          </span>
+          <span className="project-turn project-turn-current">1</span>
+          <Link to="/fjord-freight" className="project-turn project-turn-link" aria-label="Go to project 2 of 2">
+            &gt;
+          </Link>
+        </nav>
       </div>
     </div>
   )

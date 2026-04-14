@@ -3,6 +3,42 @@
   min-height: 100svh;
 }
 
+.project-pager {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px 0 40px;
+}
+
+.project-pager-dark {
+  color: var(--card-text);
+}
+
+.project-turn {
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.project-turn-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.project-turn-link:hover {
+  opacity: 1;
+}
+
+.project-turn-current {
+  opacity: 1;
+}
+
+.project-turn-disabled {
+  opacity: 0.35;
+}
+
 .back-link-dark {
   color: var(--card-text);
 }
@@ -80,7 +116,8 @@
 }
 
 .fjord-process-label {
-  font-size: 36px;
+  font-size: 24px;
+  line-height: 1.2;
   color: var(--card-text);
   text-align: right;
 }
@@ -307,113 +344,3 @@
 }
 
 /* Responsive */
-@media (max-width: 1100px) {
-  .fjord-intro {
-    flex-direction: column;
-  }
-
-  .fjord-intro-text {
-    flex: 1;
-  }
-
-  .fjord-branding {
-    flex-direction: column;
-  }
-
-  .fjord-branding-text {
-    flex: 1;
-  }
-
-  .fjord-handover {
-    flex-direction: column;
-  }
-
-  .fjord-handover-text {
-    flex: 1;
-  }
-
-  .fjord-bottom {
-    flex-direction: column;
-  }
-
-  .fjord-lessons {
-    flex: 1;
-  }
-}
-
-@media (max-width: 700px) {
-  .fjord-branding-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  .fjord-brand-truck {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .fjord-brand-wheels {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .fjord-brand-fjord {
-    grid-column: 1 / 3;
-    grid-row: 2;
-  }
-
-  .fjord-brand-logo {
-    grid-column: 1;
-    grid-row: 3;
-  }
-
-  .fjord-brand-coral {
-    grid-column: 2;
-    grid-row: 3;
-  }
-
-  .fjord-color-swatches {
-    grid-column: 1 / 3;
-    grid-row: 4;
-  }
-
-  .fjord-swatch {
-    height: 70px;
-  }
-}
-
-@media (max-width: 600px) {
-  .fjord-intro-text h1,
-  .fjord-branding-text h2 {
-    font-size: 36px;
-  }
-
-  .fjord-intro-text p,
-  .fjord-branding-text p,
-  .fjord-lessons p,
-  .fjord-handover-text li,
-  .fjord-handover-text h4 {
-    font-size: 17px;
-    line-height: 26px;
-  }
-
-  .fjord-process-label,
-  .fjord-handover-text h2,
-  .fjord-lessons h2 {
-    font-size: 28px;
-  }
-
-  .fjord-branding-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .fjord-brand-truck,
-  .fjord-brand-wheels,
-  .fjord-brand-fjord,
-  .fjord-brand-logo,
-  .fjord-brand-coral,
-  .fjord-color-swatches {
-    grid-column: 1;
-    grid-row: auto;
-  }
-}

@@ -3,6 +3,39 @@
   min-height: 100svh;
 }
 
+.project-pager {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px 0 40px;
+  color: var(--text-on-dark);
+}
+
+.project-turn {
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.project-turn-link {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.project-turn-link:hover {
+  opacity: 1;
+}
+
+.project-turn-current {
+  opacity: 1;
+}
+
+.project-turn-disabled {
+  opacity: 0.35;
+}
+
 .back-link {
   display: inline-block;
   font-family: var(--body-font);
@@ -22,22 +55,12 @@
   margin-bottom: 16px;
 }
 
-.fruh-hero-gradient {
+.fruh-hero-image {
   width: 100%;
   border-radius: 20px;
-  overflow: hidden;
-  background: linear-gradient(30deg, rgba(9, 13, 36, 0.75) 27%, rgba(60, 62, 74, 0.75) 60%, rgba(143, 147, 176, 0.75) 85%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 489px;
-  padding: 40px;
-}
-
-.fruh-hero-diagram {
-  width: 100%;
-  max-width: 1000px;
-  object-fit: contain;
+  display: block;
+  object-fit: cover;
 }
 
 /* Intro section */
@@ -151,7 +174,8 @@
 }
 
 .fruh-process-label {
-  font-size: 36px;
+  font-size: 24px;
+  line-height: 1.2;
   color: var(--text-on-dark);
 }
 
@@ -167,7 +191,7 @@
   border-radius: 20px;
   overflow: hidden;
   width: 100%;
-  max-width: 970px;
+  max-width: 1216px;
 
   img {
     width: 100%;
@@ -175,15 +199,21 @@
   }
 }
 
+.fruh-process-img-lowfi {
+  max-width: 592px;
+  margin-left: auto;
+}
+
 .fruh-process-img-wide {
-  max-width: 1093px;
+  max-width: 1216px;
 }
 
 /* Bottom sections */
 .fruh-bottom {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-end;
   margin-bottom: 40px;
 }
 
@@ -191,7 +221,8 @@
   background: var(--card-bg);
   border-radius: 20px;
   padding: 32px;
-  max-width: 354px;
+  width: 354px;
+  flex-shrink: 0;
 }
 
 .fruh-lessons h2 {
@@ -214,9 +245,15 @@
 }
 
 .fruh-roadmap h3 {
-  font-size: 36px;
+  font-size: 24px;
+  line-height: 1.2;
   color: var(--text-on-dark);
   margin-bottom: 12px;
+}
+
+.fruh-roadmap {
+  flex: 1;
+  min-width: 0;
 }
 
 .fruh-roadmap-img {
@@ -230,54 +267,3 @@
 }
 
 /* Responsive */
-@media (max-width: 1100px) {
-  .fruh-intro {
-    flex-direction: column;
-  }
-
-  .fruh-intro-text {
-    flex: 1;
-  }
-
-  .fruh-research {
-    flex-direction: column;
-  }
-
-  .fruh-research-card {
-    flex: 1;
-  }
-
-  .fruh-hero-gradient {
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 600px) {
-  .fruh-intro-text h1 {
-    font-size: 36px;
-  }
-
-  .fruh-subtitle {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-  .fruh-intro-text p,
-  .fruh-research-card p,
-  .fruh-lessons p {
-    font-size: 17px;
-    line-height: 26px;
-  }
-
-  .fruh-research-card h2,
-  .fruh-lessons h2,
-  .fruh-process-label,
-  .fruh-roadmap h3 {
-    font-size: 28px;
-  }
-
-  .fruh-hero-gradient {
-    min-height: 200px;
-    padding: 20px;
-  }
-}

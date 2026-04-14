@@ -68,6 +68,7 @@ export default function HomePage() {
         <img src={fruhProgress} alt="" className="bento-float bento-fruh-progress" />
         <img src={fruhChart2} alt="" className="bento-float bento-fruh-chart2" />
         <img src={fruhToolbar} alt="" className="bento-float bento-fruh-toolbar" />
+        <div className="bento-fjord-glass" aria-hidden="true" />
         <img src={fjordRotated} alt="" className="bento-float bento-fjord-rotated" />
         <img src={fjordMockup} alt="" className="bento-float bento-fjord-mockup" />
         <img src={fjordSmall1} alt="" className="bento-float bento-fjord-small1" />
