@@ -51,7 +51,12 @@ export default function AboutPage() {
             <Link to="/" className="about-btn">
               other works
             </Link>
-            <a href="#" className="about-btn">
+            <a
+              href="/pdfs/Greta%20Panna%20Toth_CV.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="about-btn"
+            >
               download CV pdf
             </a>
           </div>
