@@ -1,0 +1,15 @@
+---
+description: Figma MCP server rules for this portfolio
+alwaysApply: true
+---
+
+# Figma MCP
+
+This project is a Vite + React portfolio styled with CSS files (not Tailwind). When implementing a Figma design:
+
+- Call `get_design_context` before writing UI code. Treat the returned React + Tailwind as a reference, then adapt it to this repo's components and CSS.
+- Reuse existing pages, layout, and tokens in `src/` instead of generating a parallel design system.
+- The Figma MCP server provides an assets endpoint which can serve image and SVG assets.
+- If the Figma MCP server returns a localhost or `https://.../api/mcp/asset/...` source for an image or SVG, use that asset. Download and commit bytes that should live in the repo; do not redraw icons or leave placeholders.
+- Do not import or add new icon packages. Assets should come from the Figma payload or this repo.
+- After implementing, match spacing, type, and color to the screenshot from Figma.
